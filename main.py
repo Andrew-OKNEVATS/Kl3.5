@@ -43,3 +43,28 @@ if vubir == "T":
                 print("Тренування Закінчено +1 атака")
                 your_hero.attack +=1
                 break
+    elif vubir3 == "E":
+        print("Почекайте 25 секунд")
+        time_limit = 25
+        start_time = time.time()
+        while True:
+            elapsed_time = time.time() - start_time
+            print(time_limit- int(elapsed_time))
+            if elapsed_time > time_limit:
+                print("Тренування Закінчено +3 атаки")
+                your_hero.attack +=3
+                your_hero.money -=10
+                break
+    elif vubir3 == "V":
+        print("Почекайте 5 секунд")
+        time_limit = 5
+        start_time = time.time()
+        while True:
+            elapsed_time = time.time() - start_time
+            print(time_limit- int(elapsed_time))
+            if elapsed_time > time_limit:
+                print("Тренування Закінчено +5 атаки")
+                your_hero.attack +=5
+                your_hero.money -=20
+                break
+
