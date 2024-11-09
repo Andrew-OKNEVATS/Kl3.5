@@ -20,7 +20,7 @@ elif star == "N":
     print("Ви обрали випадкового героя")
     print("Життя:", your_hero2.hp, "Монети:", your_hero2.money, "Атака:", your_hero2.attack)
     your_hero = your_hero2
-vubir = input("Магазин(N), Бос(B), Тренування(T)")
+vubir = input("Магазин(N), Бос(B), Тренування(T), Банк(K)")
 if vubir == "N":
     vubir2 = input("Сапоги Гермеса:20(S), Вихід(B)")
     if vubir2 == "S":
@@ -67,4 +67,19 @@ if vubir == "T":
                 your_hero.attack +=5
                 your_hero.money -=20
                 break
-
+if vubir == "K":
+    print("Купити Банк?(35 монет)")
+    vubir4 = input("Так(Y),Ні(N)")
+    if vubir4 == "Y":
+        print("Ви купили банк тепер кожні 5 секунд вам буде приходити 2 монети")
+        while True:
+            time_limit = 5
+            start_time = time.time()
+            bank_time = time.time() - start_time
+            time_limit- int(bank_time)
+            if bank_time > time_limit:
+                your_hero.money +=2
+    your_hero.money -=35
+    vubir5 = input("Магазин(M),Бос(B),Тренування(T),Банк(K)")
+    if vubir5 == "K":
+        print("Монети",your_hero.money)
