@@ -34,7 +34,7 @@ if vubir == "T":
     vubir3 = input("Безкоштовне тренування-0 монет(B),економ тренування-10 монет(E),елітне тренування-20 монет(V)")
     if vubir3 == "B":
         print("Почекайте 60 секунд")
-        time_limit = 3
+        time_limit = 60
         start_time = time.time()
         while True:
             elapsed_time = time.time() - start_time
